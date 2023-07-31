@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComponentTestController;
-
+use App\Http\Controllers\LifeCycleTestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +25,8 @@ Route::get('/dashboard', function () {
 
 Route::get('/coponent-test1', [ComponentTestController::class, 'showComponent1']);
 Route::get('/coponent-test2', [ComponentTestController::class, 'showComponent2']);
+Route::get('/servicecontainertest', [LifeCycleTestController::class, 'showServiceContainerTest']);
+
 
 
 Route::middleware('auth')->group(function () {
